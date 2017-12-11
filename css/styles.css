@@ -1,1 +1,29 @@
+html {
+  box-sizing: border-box;
+}
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #373d3f;
+}
+
+.hack {
+  font-family: Hack, monospace;
+}
+
+.notice {
+  margin: 48px 0 0;
+}
+
+a {
+  text-decoration: none;
+  color: #373d3f;
+}
+
+a:hover {
+  text-decoration: underline;
+}
