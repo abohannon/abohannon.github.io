@@ -1,3 +1,14 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+* {
+  border: 0 none;
+  position: relative;
+  outline: none;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -21,11 +32,25 @@ body {
   margin: 48px 0 0;
 }
 
-a {
+p>a {
   text-decoration: none;
   color: #373d3f;
 }
 
-a:hover {
-  text-decoration: underline;
+p>a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #42A5F5;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: 0.25s linear;
+}
+
+p>a:hover::before, p>a:focus::before {
+  visibility: visible;
+  transform: scaleX(1);
 }
